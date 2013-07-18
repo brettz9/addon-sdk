@@ -22,6 +22,7 @@ logs it:
      var contextMenu = require("sdk/context-menu");
      var menuItem = contextMenu.Item({
       label: "Log Selection",
+      accesskey: "S",
       context: contextMenu.SelectionContext(),
       contentScript: 'self.on("click", function () {' +
                      '  var text = window.getSelection().toString();' +
@@ -46,12 +47,17 @@ info: elephantine lizard
 
 All this add-on does is to construct a context menu item. You don't need
 to add it: once you have constructed the item, it is automatically added
-in the correct context. The constructor in this case takes four options:
-`label`, `context`, `contentScript`, and `onMessage`.
+in the correct context. The constructor in this case takes five options:
+`label`, `accesskey`, `context`, `contentScript`, and `onMessage`.
 
 ### label ###
 
 The `label` is just the string that's displayed.
+
+### accesskey ###
+
+The `accesskey` is the character that will be underlined within the label
+to serve as a shortcut when navigating the context menu with the keyboard.
 
 ### context ###
 

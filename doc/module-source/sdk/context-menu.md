@@ -521,6 +521,9 @@ A labeled menu item that can perform an action when clicked.
   @prop label {string}
     The item's label. It must either be a string or an object that implements
     `toString()`.
+  @prop [accesskey] {string}
+    The item's accesskey. It must either be a single character (string) or an
+    object that implements `toString()`.
   @prop [image] {string}
     The item's icon, a string URL. The URL can be remote, a reference to an
     image in the add-on's `data` directory, or a data URI.
@@ -550,6 +553,12 @@ A labeled menu item that can perform an action when clicked.
 @property {string}
   The menu item's label. You can set this after creating the item to update its
   label later.
+</api>
+
+<api name="accesskey">
+@property {string}
+  The menu item's accesskey. You can set this after creating the item to update its
+  accesskey later. To remove the item's accesskey, set it to `null`.
 </api>
 
 <api name="image">
@@ -632,6 +641,9 @@ A labeled menu item that expands into a submenu.
   @prop items {array}
     An array of menu items that the menu will contain. Each must be an `Item`,
     `Menu`, or `Separator`.
+  @prop [accesskey] {string}
+    The menu's accesskey. It must either be a single character (string) or an
+    object that implements `toString()`.
   @prop [image] {string}
     The menu's icon, a string URL. The URL can be remote, a reference to an
     image in the add-on's `data` directory, or a data URI.
@@ -665,6 +677,12 @@ A labeled menu item that expands into a submenu.
   that modifications to it will not affect the menu. However, setting this
   property to a new array will replace all the items currently in the menu with
   the items in the new array.
+</api>
+
+<api name="accesskey">
+@property {string}
+  The menu's accesskey. You can set this after creating the menu to update its
+  accesskey later. To remove the menu's accesskey, set it to `null`.
 </api>
 
 <api name="image">
